@@ -32,6 +32,17 @@
                 "validate_as": "int",
                 "min_integer" : 0
             }
+        },
+        {
+            "id": "max_length",
+            "optional": false,
+            "advanced": false,
+            "allow_multiple": false,
+            "default_values": [ "" ],
+            "field_type": "text",
+            "text_options": {
+                "validate_as": "int",
+            }
         }
     ],
     "behavior": {
@@ -48,6 +59,11 @@
                     "input_parameter": "contigset_id",
                     "target_property": "contigset_id"
                 },
+                {
+                    "input_parameter": "max_length",
+                    "target_property": "max_length"
+                },
+
                 {
                     "input_parameter": "min_length",
                     "target_property": "min_length"
@@ -82,6 +98,11 @@
                     "input_parameter": "min_length",
                     "target_property": "input_min_length"
                 },
+                {
+                    "input_parameter": "max_length",
+                    "target_property": "input_max_length"
+                },
+
                 {
                     "narrative_system_variable": "workspace",
                     "target_property": "workspace_name"
